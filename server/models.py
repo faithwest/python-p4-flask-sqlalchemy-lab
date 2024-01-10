@@ -31,13 +31,11 @@ class Zookeeper(db.Model):
     name = db.Column(db.String(50))
     birthday = db.Column(db.Date)
     animals = db.relationship('Animal', backref='zookeeper', lazy=True)
-
-'''db :
+'''
+db :
 with app.app_context():
 
 
-
-    
     #  instances
     a_1 = Animal(name='Lion',from models import db, Zookeeper, Enclosure, Animal
  species='Big Cat')
