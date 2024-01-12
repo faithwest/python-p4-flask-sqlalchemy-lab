@@ -12,10 +12,10 @@ db = SQLAlchemy(metadata=metadata)
 class Animal(db.Model):
     __tablename__ = 'animals'
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50),unique=True)
+    name = db.Column(db.String(50), unique=True)
     species = db.Column(db.String(50))
-    enclosure_id = db.Column(db.Integer, db.ForeignKey('enclosure.id'))
-    zookeeper_id = db.Column(db.Integer, db.ForeignKey('zookeeper.id'))
+    enclosure_id = db.Column(db.Integer, db.ForeignKey('enclosures.id'))
+    zookeeper_id = db.Column(db.Integer, db.ForeignKey('zookeepers.id'))
 
 class Enclosure(db.Model):
     __tablename__ = 'enclosures'
